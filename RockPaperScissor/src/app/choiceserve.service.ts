@@ -27,7 +27,6 @@ export class ChoiceserveService {
     else if (this._choice=='scissor'){
       this.Isscissor=true; 
     }
-    alert('11111')
     this.router.navigateByUrl('/display');
     
   }
@@ -36,5 +35,6 @@ export class ChoiceserveService {
    this.Isrock=false;
     this.Ispaper=false;
     this.Isscissor=false;
+    // alternatives?
   }
 }

@@ -1,13 +1,16 @@
 <div class="box">
     <div class="container">
-        <div><img class="image" src="https://i.redd.it/t8cw1t05bj041.jpg"></div>
-        <div><img class="image"
+        <div>
+            <img (click)="choice('rock')" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
+        </div>
+        <div>
+            <img  (click)="choice('paper')"class="image"
                 src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
         </div>
-        <div><img class="image"
+        <div><img (click)="choice('scissor')" class="image"
                 src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
         </div>
     </div>
 
-    <button class="button">Shoot</button>
+    <button (click)="shoot()" class="button">Shoot</button>
 </div>
