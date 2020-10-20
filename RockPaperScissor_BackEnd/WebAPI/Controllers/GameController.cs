@@ -16,9 +16,11 @@ namespace WebAPI.Controllers
 Player p1=new Player();
 Game g1=new Game();
         [HttpGet("{selection}")]
-        public string getResult(string selection)
+        public List<string> getResult(string selection)
         {
+               
             return this.g1.getResult(selection);
+            
         }
     }
 }

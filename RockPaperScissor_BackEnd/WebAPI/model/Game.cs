@@ -21,7 +21,8 @@ namespace WebAPI.model
         {
         }
 
-        public string getResult(string selection)
+        public List<string> getResult(string selection)
+
         {
             selectionlist.Add("rock");
             selectionlist.Add("paper");
@@ -31,6 +32,8 @@ namespace WebAPI.model
             int index = r1.Next(selectionlist.Count);
             string selection2 = selectionlist[index];
             Player system = new Player("admin", selection2);
+            Game g1 = new Game();
+            List<string> resultlist = new List<string>();
 
             if (selection == selection2)
             {
@@ -47,8 +50,10 @@ namespace WebAPI.model
                 this.Result = "lose";
 
             }
-
-            return this.Result;
+            resultlist.Add(user1.choice);
+            resultlist.Add(system.choice);
+            resultlist.Add(this.Result);
+            return resultlist;
         }
 
     }

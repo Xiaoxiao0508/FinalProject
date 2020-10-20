@@ -12,12 +12,12 @@ export class ChoiceComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  choice(option:'rock'|'paper'|'scissor'){
+  choice(option?:'rock'|'paper'|'scissor'){
    
     this.serve.commitchoice(option)
   }
   shoot(){
-    this.serve.commitshoot();
+    this.serve.commitshoot("this.serve.choice");
  
   }
 

@@ -1,19 +1,37 @@
 <p>{{test}}</p>
-<h2>{{serve.Isrock}}</h2>
-<h2>{{serve.Ispaper}}</h2>
-<h2>{{serve.Isscissor}}</h2>
+
 <h2>{{serve.choice}}</h2>
+<h2>{{serve.syschoice}}</h2>
 
 
 <div>
-    <div *ngIf="serve.Isrock">
-        <img src="https://i.redd.it/t8cw1t05bj041.jpg">
+    <div  *ngIf="serve.choice=='rock'">
+        <img class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
     </div>
-   <div *ngIf="serve.Ispaper">
-        <img src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
+   <div *ngIf="serve.choice=='paper'">
+        <img class="image" src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
     </div>
-    <div *ngIf="serve.Isscissor">
-        <img src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
+    <div *ngIf="serve.choice=='scissor'">
+        <img class="image" src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
     </div>
 </div>
+<!--  display result -->
+<div>
+<div *ngIf="serve.result=='win'">You win</div>
+<div *ngIf="serve.result=='win'">You win</div>
+<div *ngIf="serve.result=='win'">You win</div>
+</div>
+<!-- display system choice -->
+<div>
+    <div *ngIf="serve.syschoice=='rock'">
+        <img class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
+    </div>
+   <div *ngIf="serve.syschoice=='paper'">
+        <img class="image" src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
+    </div>
+    <div *ngIf="serve.syschoice=='scissor'">
+        <img class="image" src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
+    </div>
+</div>
+
 <button (click)="tryagain()" class="button">Try Again</button>
