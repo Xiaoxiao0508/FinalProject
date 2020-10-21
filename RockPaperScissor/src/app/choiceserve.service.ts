@@ -33,7 +33,7 @@ export class ChoiceserveService {
     // }
 
 
- let request=this.http.post<resultlist>('http://localhost:5000/Game/paper',{selection:sentchoice} as SendChoice);   
+ let request=this.http.post<resultlist>('http://localhost:5000/Game',{selection:sentchoice} as SendChoice);   
  request.subscribe(response =>{
    this.syschoice=response.systemchoice;
    this.result=response.result;
