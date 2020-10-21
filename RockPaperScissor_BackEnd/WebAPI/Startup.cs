@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-
+// this file is modified for the cross-origin request purpose
 namespace RockPaperScissorsApi
 {
     public class Startup
