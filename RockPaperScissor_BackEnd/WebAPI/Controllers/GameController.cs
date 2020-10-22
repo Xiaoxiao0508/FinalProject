@@ -16,10 +16,11 @@ namespace WebAPI.Controllers
 Player p1=new Player();
 Game g1=new Game();
         [HttpPost("Result")]
-        public List<string> Result([FromBody] Playerchoice choice)
+        public resultlist Result([FromBody] Playerchoice choice)
         {
-               string playerchoice=choice.playerchoice;
-            return this.g1.getResult(playerchoice);
+               
+
+            return this.g1.getResult(choice.playerchoice);
             
         }
 
