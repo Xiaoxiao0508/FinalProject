@@ -1,8 +1,8 @@
 export interface resultlist {
     playerchoice:string;
-    systemchoice:string;
+    syschoice:string;
     result:string;
 }
-export interface SendChoice {
-    selection:string;
+export interface playerchoice {
+    playerchoice:string;
 }
