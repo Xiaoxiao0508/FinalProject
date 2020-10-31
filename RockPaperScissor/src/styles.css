@@ -1,29 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+.title{
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 200px;
+    margin-right: 500px;
+    display: inline;
+    /* anther way? */
+}
+
+.username{
+    float: right;
+}
+.link{
+    position: relative;
+    top:20px;
+    left:75%;
+    color: aquamarine;
+    cursor: pointer;
+}
 .box{
-    height: 300px;
     width:70%;
     background-color:lightgrey;
     margin:auto;   
 }
+.choicebox{
+    height: 200px;
+}
+.displaybox{
+    height: 300px;
+}
 .container{
     display: flex;
     justify-content: center;
+  
+}
+.statement{
+    font-size: 32px;
+  margin-left: 400px;
+  margin-top:50px;
+
 }
 .image{
-    width:150px;
-    height:150px;
+    width:100px;
+    height:100px;
     opacity: 0.5;
   margin:30px;
   cursor: pointer;
 }
+
+.display {
+    
+    float: left;
+} 
+.VS{
+    margin-top: 80px;
+}
 .button{
-    height: 30px;
-    width: 100px;
+  height: 30px;
+  width: 100px;
    background-color:#2566C8;
    color: white;
-   position: absolute;
-   left: 50%;
-   margin-top:30px;
    border-radius: 5px;
    cursor: pointer;
+   margin-left:400px;
+   margin-bottom: 50px;
 }
+
+ 
