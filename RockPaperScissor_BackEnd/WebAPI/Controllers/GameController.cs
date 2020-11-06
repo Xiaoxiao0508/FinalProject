@@ -15,29 +15,26 @@ namespace WebAPI.Controllers
 
         Player p1 = new Player();
         Game g1 = new Game();
-
+        resultlist resultlist = new resultlist();
 
         [HttpPost("result")]
-        public resultlist Result([FromBody] Playerchoice choice)
+        public resultlist Result([FromBody] Player player)
         {
-
-
-            return this.g1.getResult(choice.playerchoice);
+            resultlist = this.g1.getResult(player);
+            return resultlist;
 
         }
-        [HttpPost("leaderboard")]
-        public Leaderboard getleaderboard([FromBody] Player player)
-        {
 
-            Leaderboard leaderboard = new Leaderboard();
-            List<Leaderboardline> leaderboardlinelist = new List<Leaderboardline>();
-            Leaderboardline leaderboardline = new Leaderboardline();
-            leaderboardline = g1.Leaderboard(player);
-            leaderboardlinelist.Add(leaderboardline);
-            leaderboard.LeaderboardList = leaderboardlinelist;
-            return leaderboard;
+        [HttpGet("leaderboard")]
+        public Allresult getleaderboard()
+        {
+           
+
+           return this.g1.GetAllresult();
 
         }
+
+
 
     }
 }

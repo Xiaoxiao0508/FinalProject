@@ -8,11 +8,13 @@ namespace WebAPI.model
         public Player Player { get; set; }
         public string Result { get; set; }
         List<string> selectionlist = new List<string>();
+        resultlist resultlist = new resultlist();
+        List<resultlist> r1 = new List<resultlist>();
+        Allresult allresult = new Allresult();
+        int turnsplayed = 1;
+        int gamewin = 1;
 
-        int gameplayed = 0;
 
-        int gamewin =2;
-        // double winratio = 0;
 
         public Game(Player player, string result)
         {
@@ -23,59 +25,46 @@ namespace WebAPI.model
         public Game()
         {
         }
-
-        public resultlist getResult(string playerselection)
+        public resultlist getResult(Player p1)
 
         {
-            gameplayed++;
-            resultlist r1 = new resultlist();
+            turnsplayed++;
             selectionlist.Add("rock");
             selectionlist.Add("paper");
             selectionlist.Add("scissor");
-            Player user1 = new Player("user1", playerselection);
             Random rand = new Random();
             int index = rand.Next(selectionlist.Count);
             string sysselection = selectionlist[index];
             Player sys = new Player("admin", sysselection);
             Game g1 = new Game();
-            List<string> resultlist = new List<string>();
-
-            if (playerselection == sysselection)
+            if (p1.Choice == sysselection)
             {
                 this.Result = "draw";
-
             }
-            else if ((playerselection == "rock" && sysselection == "scissor") || (playerselection == "paper" && sysselection == "rock") || (playerselection == "scissor" && sysselection == "paper"))
+            else if ((p1.Choice == "rock" && sysselection == "scissor") || (p1.Choice == "paper" && sysselection == "rock") || (p1.Choice == "scissor" && sysselection == "paper"))
             {
                 this.Result = "win";
-
-                gamewin=gamewin+1;
-
+                gamewin++;
             }
-
             else
             {
                 this.Result = "lose";
-
             }
-
-            r1.playerchoice = playerselection;
-            r1.syschoice = sysselection;
-            r1.result = this.Result;
-            return r1;
+            resultlist.playername = p1.Name;
+            resultlist.playerchoice = p1.Choice;
+            resultlist.syschoice = sysselection;
+            resultlist.result = this.Result;
+            resultlist.turnsplayed = turnsplayed;
+            resultlist.gamewin = gamewin;
+            resultlist.winratio = gamewin / turnsplayed;
+            r1.Add(resultlist);
+            allresult.allresultdetail = r1;
+            return resultlist;
         }
-        public Leaderboardline Leaderboard(Player player)
+        public Allresult GetAllresult()
 
         {
-            Leaderboardline leaderboardline = new Leaderboardline();
-        
-            this.getResult(player.Name);
-
-            leaderboardline.Name = player.Name;
-            leaderboardline.Gameplayed=gameplayed;
-            leaderboardline.Winratio=gamewin/gameplayed;
-
-            return leaderboardline;
+            return allresult;
         }
 
     }
