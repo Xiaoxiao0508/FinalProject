@@ -5,18 +5,18 @@ namespace WebAPI.model
 {
     public class Leaderboard
     {
-       
-
-        public List<Leaderboardline>  LeaderboardList { get; set; }
+        public List<Leaderboardline>  Leaderboardlist { get; set; }
 
 
          public Leaderboard()
         {
         }
 
-        public Leaderboard(List<Leaderboardline> leaderboardList)
+        public Leaderboard(List<Leaderboardline> leaderboardlist)
         {
-            LeaderboardList = leaderboardList;
+            Leaderboardlist = leaderboardlist;
         }
+    
+        
     }
 }

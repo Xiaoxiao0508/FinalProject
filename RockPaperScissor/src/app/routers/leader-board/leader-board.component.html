@@ -1,0 +1,18 @@
+<div class="box leaderbox">
+  <h2>Leader Board</h2>
+
+
+  <table style="width:100%">
+    <tr>
+      <th>Username</th>
+      <th>Winratio</th>
+      <th>Turnsplayed</th>
+    </tr>
+    <tr *ngFor="let line of serve.leaderboardlist">
+      <th> {{line.name}}</th>
+      <th> {{line.turnsplayed}}</th>
+      <th>  {{line.winratio}}</th>
+    </tr>
+  </table>
+
+</div>

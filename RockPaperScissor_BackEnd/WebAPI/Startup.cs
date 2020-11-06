@@ -26,6 +26,7 @@ namespace RockPaperScissorsApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            // services.AddCores,specify we can allow any orign/method/header
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(options =>

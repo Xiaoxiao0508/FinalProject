@@ -16,9 +16,12 @@ export class ChoiceComponent implements OnInit {
    
     this.serve.commitchoice(option)
   }
-  shoot(){
-    this.serve.commitshoot("this.serve.choice");
+  shoot(name:string){
+    this.serve.commitshoot(name);
  
   }
+  // viewreport(){
+  //   this.serve.commitview();
+  // }
 
 }

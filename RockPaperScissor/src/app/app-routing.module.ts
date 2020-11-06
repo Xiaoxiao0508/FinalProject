@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { ChoiceComponent } from './routers/choice/choice.component';
 import { DisplayComponent } from './routers/display/display.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),
+  BrowserModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

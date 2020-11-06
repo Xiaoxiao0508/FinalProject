@@ -26,7 +26,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("leaderboard")]
-        public Allresult getleaderboard()
+        public Leaderboard getleaderboard()
         {
            
 

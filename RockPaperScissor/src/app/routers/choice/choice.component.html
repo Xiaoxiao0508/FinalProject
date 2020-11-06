@@ -1,4 +1,5 @@
-<div class="box">
+<label for="username">Username:</label><input #username type="test" id="username">
+<div class="choicebox box">
     <div class="container">
         <div>
             <img (click)="choice('rock')" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
@@ -12,5 +13,6 @@
         </div>
     </div>
 
-    <button (click)="shoot()" class="button">Shoot</button>
+    <button (click)="shoot(username.value)" class="button">Shoot</button>
 </div>
+<a class="link" > View Report ></a>

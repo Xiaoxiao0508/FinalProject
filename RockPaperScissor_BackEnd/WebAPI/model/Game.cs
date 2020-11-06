@@ -9,7 +9,7 @@ namespace WebAPI.model
         public string Result { get; set; }
         List<string> selectionlist = new List<string>();
         resultlist resultlist = new resultlist();
-        List<resultlist> r1 = new List<resultlist>();
+
         Allresult allresult = new Allresult();
         int turnsplayed = 1;
         int gamewin = 1;
@@ -28,10 +28,12 @@ namespace WebAPI.model
         public resultlist getResult(Player p1)
 
         {
+            List<resultlist> r1 = new List<resultlist>();
             turnsplayed++;
             selectionlist.Add("rock");
             selectionlist.Add("paper");
             selectionlist.Add("scissor");
+
             Random rand = new Random();
             int index = rand.Next(selectionlist.Count);
             string sysselection = selectionlist[index];
@@ -61,10 +63,18 @@ namespace WebAPI.model
             allresult.allresultdetail = r1;
             return resultlist;
         }
-        public Allresult GetAllresult()
+        public Leaderboard GetAllresult()
 
         {
-            return allresult;
+            Leaderboard leaderboard = new Leaderboard();
+            Leaderboardline leaderboardline = new Leaderboardline();
+            leaderboardline.Name = this.resultlist.playername;
+            leaderboardline.Turnsplayed = this.resultlist.turnsplayed;
+            leaderboardline.Winratio = this.resultlist.winratio;
+            List<Leaderboardline> l1 = new List<Leaderboardline>();
+            l1.Add(leaderboardline);
+            leaderboard.Leaderboardlist = l1;
+            return leaderboard;
         }
 
     }

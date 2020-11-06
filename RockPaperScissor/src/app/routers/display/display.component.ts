@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChoiceserveService } from 'src/app/choiceserve.service';
+import { LeaderBoardService } from 'src/app/leader-board.service';
 
 
 @Component({
@@ -8,13 +9,16 @@ import { ChoiceserveService } from 'src/app/choiceserve.service';
   styleUrls: ['./display.component.css']
 })
 export class DisplayComponent implements OnInit {
-public test='12334'
-  constructor(public serve:ChoiceserveService) { }
+
+  constructor(public serve: ChoiceserveService) { }
 
   ngOnInit(): void {
 
   }
-tryagain(){
-  this.serve.committry();
-}
+  tryagain() {
+    this.serve.committry();
+  }
+  viewreport() {
+    this.serve.commitview();
+  }
 }

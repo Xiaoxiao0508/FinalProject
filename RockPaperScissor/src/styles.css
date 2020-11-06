@@ -29,6 +29,9 @@
 .displaybox{
     height: 300px;
 }
+.leaderboardbox{
+    height:350px;
+}
 .container{
     display: flex;
     justify-content: center;
