@@ -8,6 +8,10 @@ import { ChoiceComponent } from './routers/choice/choice.component';
 import { DisplayComponent } from './routers/display/display.component';
 import { PagenotfoundComponent } from './routers/pagenotfound/pagenotfound.component';
 import { LeaderBoardComponent } from './routers/leader-board/leader-board.component';
+import { RoundComponent } from './routers/round/round.component';
+import { HeaderComponent } from './routers/header/header.component';
+import { ViewReportComponent } from './routers/view-report/view-report.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { LeaderBoardComponent } from './routers/leader-board/leader-board.compon
     DisplayComponent,
     PagenotfoundComponent,
     LeaderBoardComponent,
+    RoundComponent,
+    HeaderComponent,
+    ViewReportComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
