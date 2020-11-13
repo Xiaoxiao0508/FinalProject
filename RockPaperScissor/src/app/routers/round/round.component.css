@@ -1,0 +1,65 @@
+/* :host {
+    display: block;
+    height: 100%;
+  }
+  
+  .info {
+    height: 25%;
+  }
+  
+  .choices,
+  .submission {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .choices {
+    height: 50%;
+  } */
+  
+  .choice {
+    position: relative;
+    width: 15.96125%;
+    /* width: 20%; */
+  }
+/*   
+  .choice:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+  
+  .choice button {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .selected {
+    border: 2px blue solid;
+  }
+  
+  .submission {
+    height: 25%;
+  }
+  
+  .submission button {
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.5vw;
+    height: 30%;
+    width: 10%;
+  }
+  
+  .submission button:disabled {
+    background-color: gray;
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    .submission button {
+      font-size: 1.25em;
+    }
+  } */

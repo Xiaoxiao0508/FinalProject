@@ -1,0 +1,13 @@
+
+<app-header></app-header>
+<div class="choicebox box">
+    <div class="container_round">
+        <div *ngFor="let round of serve.roundList" (click)="roundchoice = round" class="roundchoice">
+            <div>{{round}}</div>
+            <div>{{round == 1 ? 'Round' : 'Rounds'}}</div>
+        </div>
+    </div>
+
+    <button (click)="start()" class="button" [disabled]="roundchoice==null">Start</button>
+</div>
+<app-view-report></app-view-report>
