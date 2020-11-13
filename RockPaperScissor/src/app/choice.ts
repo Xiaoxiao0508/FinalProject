@@ -1,5 +1,4 @@
 export interface roundresult {
-    playername:string;
     playerchoice:string;
     syschoice:string;
     result:string;
@@ -8,7 +7,7 @@ export interface roundresult {
     gameratio:number;
 }
 export interface gameresult{
-    gameresult:string;
+    result:string;
     allresult:roundresult[];
 }
 
@@ -20,8 +19,9 @@ export interface playerroundrequest{
 }
 export interface leaderboardline {
     name:string;
-    turnsplayed:number;
     winratio:number;
+    gamesplayed:number;
+    lastfive:string;
 }
 export interface leaderboard{
   leaderboardlist:leaderboardline[];
