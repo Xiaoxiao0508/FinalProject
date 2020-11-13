@@ -1,4 +1,5 @@
-<label for="username">Username:</label><input #username type="test" id="username">
+<!-- <label for="username">Username:</label><input #username type="test" id="username"> -->
+<app-header></app-header>
 <div class="choicebox box">
     <div class="container">
         <div>
@@ -13,6 +14,6 @@
         </div>
     </div>
 
-    <button (click)="shoot(username.value)" class="button">Shoot</button>
+    <button (click)="shoot()" class="button">Shoot</button>
 </div>
-<a class="link" > View Report ></a>
+<app-view-report></app-view-report>

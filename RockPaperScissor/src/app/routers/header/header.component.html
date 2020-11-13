@@ -1,0 +1,7 @@
+  
+<h1>Rock, Paper, Scissors</h1>
+<label for="username">Username&nbsp;<input [(ngModel)]="serve.username"
+  [ngClass]="serve.username == null ||serve.username == '' ? 'null-or-empty' : ''"
+  [disabled]="serve.roundNumber != null"
+  type="text" id="username">
+</label>

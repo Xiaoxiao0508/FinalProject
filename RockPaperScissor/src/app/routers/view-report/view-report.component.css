@@ -1,0 +1,7 @@
+.link{
+    position: relative;
+    top:20px;
+    left:75%;
+    color: aquamarine;
+    cursor: pointer;
+}
