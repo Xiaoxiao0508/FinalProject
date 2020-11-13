@@ -1,4 +1,4 @@
-
+<app-header></app-header>
 <div class="displaybox box">
     <div class="statement"> 
         <div *ngIf="serve.result=='win'" >You win</div>
@@ -29,4 +29,5 @@
     </div> 
     <button (click)="tryagain()" class="button">Try Again</button>
 </div>
-<a class="link" (click)="viewreport()"> View Report ></a>
+<!-- <a class="link" (click)="viewreport()"> View Report ></a> -->
+<app-view-report></app-view-report>
