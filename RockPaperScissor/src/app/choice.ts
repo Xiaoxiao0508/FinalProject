@@ -1,22 +1,22 @@
-export interface resultlist {
+export interface roundresult {
     playername:string;
     playerchoice:string;
     syschoice:string;
     result:string;
-    turnsplayer:number;
+    turnsplayed:number;
     gamewin:number;
     gameratio:number;
 }
-export interface resultSum{
-    allresult:resultlist[];
-}
-export interface playerchoice {
-    playerchoice:string;
+export interface gameresult{
+    gameresult:string;
+    allresult:roundresult[];
 }
 
-export interface Player{
+
+export interface playerroundrequest{
     Name:string;
-    Choice:string;
+   numberofrounds:number; 
+    choices:string[];
 }
 export interface leaderboardline {
     name:string;
