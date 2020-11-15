@@ -15,8 +15,8 @@ export class RoundComponent implements OnInit {
   ngOnInit(): void {
   }
   start(){
-    this.serve.numberOfRounds = this.roundchoice;
-    this.serve.roundNumber = 1;
+    this.serve.roundquantity= this.roundchoice;
+    this.serve.roundNo = 1;
     this.router.navigateByUrl("/choice")
   }
 
