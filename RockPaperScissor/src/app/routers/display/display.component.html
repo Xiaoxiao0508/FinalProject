@@ -5,29 +5,27 @@
         <div *ngIf="serve.result=='lose'" >You lose</div>
         <div *ngIf="serve.result=='draw'" >Draw</div>
     </div>
-    <div class="container">
-   
-    
+    <div class="container" *ngFor="let result of serve.roundresult" >
         <div>
-            <img *ngIf="serve.choice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
-            <img *ngIf="serve.choice=='paper'" class="image"
+            <img *ngIf="result.playerchoice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
+            <img *ngIf="result.playerchoice=='paper'" class="image"
                 src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
-            <img *ngIf="serve.choice=='scissor'" class="image"
+            <img *ngIf="result.playerchoice=='scissor'" class="image"
                 src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
         </div>
         <p class="display VS">VS</p>
 
         <!-- display system choice -->
-        <div class="display">
-            <img *ngIf="serve.syschoice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
-            <img *ngIf="serve.syschoice=='paper'" class="image"
+        <div class="display" *ngFor="let result of serve.gameresult.allresult">
+            <img *ngIf="result.syschoice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
+            <img *ngIf="result.syschoice=='paper'" class="image"
                 src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
-            <img *ngIf="serve.syschoice=='scissor'" class="image"
+            <img *ngIf="result.syschoice=='scissor'" class="image"
                 src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
         </div>
         
     </div> 
     <button (click)="tryagain()" class="button">Try Again</button>
 </div>
-<!-- <a class="link" (click)="viewreport()"> View Report ></a> -->
+
 <app-view-report></app-view-report>
