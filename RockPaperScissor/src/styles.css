@@ -1,11 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-.title{
+.header{
     font-size: 16px;
     font-style: normal;
-    margin-left: 200px;
-    margin-right: 500px;
-    display: inline;
-    /* anther way? */
+    margin-left: 15%;
+}
+.leaderboardheader{
+    font-size:36px;
+    margin-left:50px;
+    padding:10px;
 }
 
 .username{
@@ -30,7 +32,8 @@
     height: 100%;
 }
 .leaderboardbox{
-    height:350px;
+    height:100%;
+ 
 }
 .container{
     display: flex;
