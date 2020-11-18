@@ -8,6 +8,6 @@
         </div>
     </div>
 
-    <button (click)="start()" class="button" [disabled]="roundchoice==null">Start</button>
+    <button (click)="start()" class="button" [disabled]="roundchoice==null||this.serve.username==null">Start</button>
 </div>
 <app-view-report></app-view-report>

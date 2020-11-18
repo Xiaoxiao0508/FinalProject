@@ -42,8 +42,6 @@ export class ChoiceserveService {
         this.result=response.result;
         this.roundresult=response.allresult;
       })
-      alert("resultpage");
-     
     }
     else {
       this.disabled == true;
@@ -51,7 +49,7 @@ export class ChoiceserveService {
 
   }
   committry() {
-    this.router.navigateByUrl("/choice");
+    this.router.navigateByUrl("/round");
     this._choice = null;
 
   }

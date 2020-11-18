@@ -7,20 +7,20 @@
     </div>
     <div class="container" *ngFor="let result of serve.roundresult" >
         <div>
-            <img *ngIf="result.playerchoice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
-            <img *ngIf="result.playerchoice=='paper'" class="image"
+            <img *ngIf="result.playerchoice=='rock'" class="resultimage" src="https://i.redd.it/t8cw1t05bj041.jpg">
+            <img *ngIf="result.playerchoice=='paper'" class="resultimage"
                 src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
-            <img *ngIf="result.playerchoice=='scissor'" class="image"
+            <img *ngIf="result.playerchoice=='scissor'" class="resultimage"
                 src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
         </div>
         <p class="display VS">VS</p>
 
         <!-- display system choice -->
-        <div class="display" *ngFor="let result of serve.gameresult.allresult">
-            <img *ngIf="result.syschoice=='rock'" class="image" src="https://i.redd.it/t8cw1t05bj041.jpg">
-            <img *ngIf="result.syschoice=='paper'" class="image"
+        <div class="display">
+            <img *ngIf="result.syschoice=='rock'" class="resultimage" src="https://i.redd.it/t8cw1t05bj041.jpg">
+            <img *ngIf="result.syschoice=='paper'" class="resultimage"
                 src="https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/JA325360_jasart_cso_pk250_jasart_cartridge_pap_a1_white.jpg">
-            <img *ngIf="result.syschoice=='scissor'" class="image"
+            <img *ngIf="result.syschoice=='scissor'" class="resultimage"
                 src="https://image.shutterstock.com/image-vector/open-scissor-white-background-icon-260nw-1414191452.jpg">
         </div>
         

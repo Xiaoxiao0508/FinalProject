@@ -8,7 +8,7 @@ import { ChoiceserveService } from 'src/app/choiceserve.service';
 })
 export class ChoiceComponent implements OnInit {
 
-  constructor(private serve:ChoiceserveService) { }
+  constructor(public serve:ChoiceserveService) { }
 
   ngOnInit(): void {
   }
