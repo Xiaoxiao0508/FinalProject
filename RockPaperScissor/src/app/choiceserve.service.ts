@@ -23,7 +23,7 @@ export class ChoiceserveService {
   gameresult: gameresult;
   roundresult:roundresult[]=[];
   public leaderboardline: leaderboardline;
-  public leaderboardlist: leaderboardline[];
+  public leaderboardlinelist: leaderboardline[];
   constructor(private router: Router, public http: HttpClient) { }
 
   commitchoice(option?: 'rock' | 'paper' | 'scissor') {
@@ -59,7 +59,7 @@ export class ChoiceserveService {
     let request = this.http.get<leaderboard>('http://localhost:5000/Game/leaderboard');
     request.subscribe(response => {
 
-      this.leaderboardlist = response.leaderboardlist;
+      this.leaderboardlinelist = response.leaderboardlist;
 
     })
     this.router.navigateByUrl("/board");

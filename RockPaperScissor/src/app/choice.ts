@@ -2,9 +2,6 @@ export interface roundresult {
     playerchoice:string;
     syschoice:string;
     resultofround:string;
-    // turnsplayed:number;
-    // gamewin:number;
-    // gameratio:number;
 }
 export interface gameresult{
     result:string;

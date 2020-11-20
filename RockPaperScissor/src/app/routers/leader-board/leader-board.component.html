@@ -8,10 +8,11 @@
       <th>Games played</th>
       <th>Last 5 Games</th>
     </tr>
-    <tr *ngFor="let line of serve.leaderboardlist">
+    <tr *ngFor="let line of serve.leaderboardlinelist">
       <th> {{line.name}}</th>
-      <th> {{line.turnsplayed}}</th>
-      <th>  {{line.winratio}}</th>
+      <th> {{line.winratio}}</th>
+      <th> {{line.gamesplayed}}</th>
+      <th> {{line.lastfive}}</th>
     </tr>
   </table>
 
