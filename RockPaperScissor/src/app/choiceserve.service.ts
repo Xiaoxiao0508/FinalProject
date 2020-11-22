@@ -50,7 +50,7 @@ export class ChoiceserveService {
   }
   committry() {
     this.router.navigateByUrl("/round");
-    this._choice = null;
+    this.choicelist =[];
 
   }
 
