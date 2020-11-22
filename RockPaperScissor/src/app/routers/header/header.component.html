@@ -1,7 +1,8 @@
   
-<h1>Rock, Paper, Scissors</h1>
-<label for="username">Username<input [(ngModel)]="serve.username"
-  [ngClass]="serve.username == null ||serve.username == '' ? 'null-or-empty' : ''"
-  [disabled]="serve.roundNo != null"
-  type="text" id="username">
+<div class="header">Rock, Paper, Scissors</div>
+
+<label for="username" class="username">Username<input [(ngModel)]="serve.username"
+  [ngClass]="serve.username == null ||serve.username == '' ? 'empty' : ''"
+  type="text" id="username"[disabled]="serve.roundNo != null">
 </label>
+
